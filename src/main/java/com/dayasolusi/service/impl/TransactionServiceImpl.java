@@ -25,7 +25,6 @@ public class TransactionServiceImpl implements TransactionService {
     public ResponseEntity<Object> getTransactions() {
         List<Transaction> transactions = transactionRepository.findAll();
         SuccessResponse<List<Transaction>> response = new SuccessResponse<>("success", transactions);
-        System.out.println(response);
         return ResponseEntity.ok().body(response);
     }
 
